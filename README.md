@@ -4,12 +4,12 @@ Utilities for working with file and directory paths, supporting the separator fr
 
 Similar packages:
 
-| Package      | Description                                                             |
-|:-------------|:------------------------------------------------------------------------|
-| path         | recognises the path-part separator from the operating system            |
-| [path_posix] | recognises the `/` (slash) as the path-part separator                   |
-| [path_win32] | recognises the `\` (backslash) as the path-part separator               |
-| [path_both]  | recognises both `/` (slash) and `\` (backslash) as path-part separators |
+| Package | Description                                                             |
+|:--------|:------------------------------------------------------------------------|
+| path    | recognises the path-part separator from the operating system            |
+| [upath] | recognises the `/` (slash) as the path-part separator                   |
+| [wpath] | recognises the `\` (backslash) as the path-part separator               |
+| [bpath] | recognises both `/` (slash) and `\` (backslash) as path-part separators |
 
 ## Synopsis
 
@@ -73,8 +73,8 @@ Copyright (c) 2023 Ferdinand Prantl
 Licensed under the MIT license.
 
 [VPM]: https://vpm.vlang.io/packages/prantlf.path
-[path_posix]: https://github.com/prantlf/v-path-posix
-[path_win32]: https://github.com/prantlf/v-path-win32
-[path_both]: https://github.com/prantlf/v-path-both
+[upath]: https://github.com/prantlf/v-upath
+[wpath]: https://github.com/prantlf/v-wpath
+[bpath]: https://github.com/prantlf/v-bpath
 [POSIX basename]: https://man7.org/linux/man-pages/man3/basename.3p.html
 [POSIX dirname]: https://man7.org/linux/man-pages/man3/dirname.3p.html

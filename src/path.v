@@ -1,6 +1,7 @@
 module path
 
 import os
+import prantlf.strutil { last_index_u8_within_nochk }
 
 const sep = os.path_separator[0]
 
@@ -53,7 +54,7 @@ pub fn extname(p string) string {
 	}
 
 	end := last_name_end(p)
-	mut dot_index := last_index_of(p, `.`, end)
+	mut dot_index := unsafe { last_index_u8_within_nochk(p, `.`, 0, end) }
 	return if dot_index > 0 {
 		if dot_index > 0 {
 			prev := p[dot_index - 1]
@@ -86,18 +87,7 @@ fn last_name_end(p string) int {
 [direct_array_access]
 fn last_sep(s string, end int) int {
 	for i := end - 1; i >= 0; i-- {
-		c := unsafe { s.str[i] }
-		if c == path.sep {
-			return i
-		}
-	}
-	return -1
-}
-
-[direct_array_access]
-fn last_index_of(s string, c u8, end int) int {
-	for i := end - 1; i >= 0; i-- {
-		if unsafe { s.str[i] == c } {
+		if s[i] == path.sep {
 			return i
 		}
 	}
