@@ -25,7 +25,7 @@ fn test_name_with_dot() {
 }
 
 fn test_name_with_dot_and_slash() {
-	out := extname('a.${path.slash}')
+	out := extname('a.${slash}')
 	assert out == '.'
 }
 
@@ -35,16 +35,16 @@ fn test_name_with_ext() {
 }
 
 fn test_name_with_ext_and_slash() {
-	out := extname('a.b${path.slash}')
+	out := extname('a.b${slash}')
 	assert out == '.b'
 }
 
 fn test_name_with_ext_and_two_slashes() {
-	out := extname('a.b${path.slash}${path.slash}')
+	out := extname('a.b${slash}${slash}')
 	assert out == '.b'
 }
 
 fn test_slash_before_dot() {
-	out := extname('${path.slash}.a')
+	out := extname('${slash}.a')
 	assert out == ''
 }
