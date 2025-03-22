@@ -29,7 +29,7 @@ pub fn basename(p string) string {
 }
 
 pub fn dirname(p string) string {
-	if p.len == 0 {
+	if p == '' {
 		return '.'
 	}
 	if p.len == 1 && p[0] == sep {
