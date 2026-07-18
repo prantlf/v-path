@@ -1,5 +1,11 @@
 # Changes
 
+## [0.1.0](https://github.com/prantlf/v-path/compare/v0.0.3...v0.1.0) (2026-07-18)
+
+### Features
+
+* Adapt to breaking changes in V ([92f5323](https://github.com/prantlf/v-path/commit/92f5323a866adf58a254fd3af209912252c3f8fc))
+
 ## [0.0.3](https://github.com/prantlf/v-path/compare/v0.0.2...v0.0.3) (2024-11-16)
 
 ### Bug Fixes
